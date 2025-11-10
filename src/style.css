@@ -13,6 +13,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --item-bg: #112158;
+  --item-padding: 15px;
+  --item-br: 12px;
 }
 
 html {
@@ -88,6 +92,10 @@ span.orange {
   max-width: 80%;
 }
 
+.items.center {
+  margin: 0 auto;
+}
+
 .items.left {
   margin-right: auto;
 }
@@ -100,20 +108,46 @@ span.orange {
   display: grid;
   grid-template-columns: 150px 1fr;
   margin-bottom: 30px;
-  background: #112158;
+  background: var(--item-bg);
   color: white;
-  padding: 15px;
-  border-radius: 12px;
+  padding: var(--item-padding);
+  border-radius: var(--item-br);
   /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.items .our-solution {
+  background: var(--item-bg);
+  border-radius: var(--item-br);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.items .our-solution p {
+  padding: var(--item-padding) 20px;
+  margin-bottom: 0;
+}
+
+.items .our-solution p:not(:last-child) {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.items .our-solution.our-solution__head {
+  color: #d39d40;
+}
+
+/* .items .our-solution .our-solution__content p {
+  color: white;
+} */
+
 .items .item__with-header {
   margin-bottom: 30px;
-  background: #112158;
+  background: var(--item-bg);
   color: white;
-  padding: 15px;
-  border-radius: 12px;
+  padding: var(--item-padding);
+  border-radius: var(--item-br);
   /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -136,10 +170,10 @@ span.orange {
 
 .item-table {
   margin-bottom: 30px;
-  background: #112158;
+  background: var(--item-bg);
   color: white;
   padding: 15px;
-  border-radius: 12px;
+  border-radius: var(--item-br);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -168,7 +202,7 @@ section>img {
   position: absolute;
   top: 50%;
   width: 100%;
-  max-width: 37vw;
+  max-width: 35vw;
 }
 
 section>img.right {
@@ -256,4 +290,16 @@ footer .wrapper {
 
 footer .members {
   color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.ten.bg {
+  height: 460px;
+  margin-top: 3em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
