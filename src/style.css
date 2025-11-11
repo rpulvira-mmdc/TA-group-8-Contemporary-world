@@ -303,3 +303,7 @@ footer .members {
   background-repeat: no-repeat;
   background-position: center center;
 }
+
+section {
+  opacity: 0;
+}
